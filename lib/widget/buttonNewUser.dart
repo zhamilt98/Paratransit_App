@@ -15,21 +15,9 @@ class _ButtonNewUserState extends State<ButtonNewUser> {
         alignment: Alignment.bottomRight,
         height: 50,
         width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 350.0),
-              blurRadius: 10.0, // has the effect of softening the shadow
-              spreadRadius: 1.0, // has the effect of extending the shadow
-              offset: Offset(
-                5.0, // horizontal, move right 10
-                5.0, // vertical, move down 10
-              ),
-            ),
-          ],
-            color: Colors.black54, borderRadius: BorderRadius.circular(30)),
-        child: FlatButton(
-          onPressed: (){
+        child: RaisedButton(
+          color: Color.fromRGBO(0, 0, 0, 100.0),
+          onPressed: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => DashboardPage()));
           },

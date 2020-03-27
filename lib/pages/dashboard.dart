@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/widget/button.dart';
-import 'package:flutterapp/widget/first.dart';
-import 'package:flutterapp/widget/forgot.dart';
-import 'package:flutterapp/widget/inputEmail.dart';
-import 'package:flutterapp/widget/password.dart';
+import 'package:flutterapp/widget/hamburger.dart';
+import 'package:flutterapp/widget/schedule.dart';
 import 'package:flutterapp/widget/textLogin.dart';
-import 'package:flutterapp/widget/verticalText.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -25,14 +21,17 @@ class _DashboardPageState extends State<DashboardPage> {
         ),
         child: ListView(
           children: <Widget>[
-            Column(
-
-            ),
+            Column(children: <Widget>[
+              Row(children: <Widget>[
+                hamburger(),
+                TextLogin(),
+              ]),
+              schedule(),
+              schedule()
+            ]),
           ],
         ),
       ),
     );
   }
 }
-
-

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class VerticalText extends StatefulWidget {
+class schedule extends StatefulWidget {
   @override
-  _VerticalTextState createState() => _VerticalTextState();
+  _scheduleState createState() => _scheduleState();
 }
 
-class _VerticalTextState extends State<VerticalText> {
+class _scheduleState extends State<schedule> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, left: 10),
+      padding: const EdgeInsets.only(top: 60, left: 10),
       child: RotatedBox(
           quarterTurns: -1,
           child: Text(
-            'Sign In',
+            'Schedule',
             style: TextStyle(
               color: Colors.black,
               fontSize: 38,
