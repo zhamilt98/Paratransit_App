@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/widget/hamburger.dart';
-import 'package:flutterapp/widget/schedule.dart';
-import 'package:flutterapp/widget/textLogin.dart';
+import 'package:flutterapp/widget/general/hamburger.dart';
+import 'package:flutterapp/widget/dashboard/schedule.dart';
+import 'package:flutterapp/widget/general/topText.dart';
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
+import 'package:flutterapp/widget/dashboard/dashboardVertical.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -26,11 +27,11 @@ class _DashboardPageState extends State<DashboardPage> {
               children: <Widget>[
                 RowSuper(
                   children: <Widget>[
-                    RowSpacer(),
+                    DashboardVerticalText(),
                     TextLogin(),
                     hamburger(),
                   ],
-                  innerDistance: -10,
+                  innerDistance: -15,
                   alignment: Alignment.topRight,
                 ),
                 schedule(),

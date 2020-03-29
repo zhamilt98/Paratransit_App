@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/widget/book/dropofLocation.dart';
 import 'package:flutterapp/widget/general/hamburger.dart';
 import 'package:flutterapp/widget/general/topText.dart';
-import 'package:flutterapp/widget/book/pickupLocation.dart';
-import 'package:flutterapp/widget/book/time.dart';
-import 'package:flutterapp/widget/book/bookSubmit.dart';
-import 'package:flutterapp/widget/book/bookAMPM.dart';
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
-import 'package:flutterapp/widget/book/bookVertical.dart';
+import 'package:flutterapp/widget/schedule/dayButton.dart';
+import 'package:flutterapp/widget/schedule/scheduleVertical.dart';
 
-class BookPage extends StatefulWidget {
+class SchedulePage extends StatefulWidget {
   @override
-  _BookPageState createState() => _BookPageState();
+  _SchedulePageState createState() => _SchedulePageState();
 }
 
-class _BookPageState extends State<BookPage> {
+class _SchedulePageState extends State<SchedulePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,27 +23,23 @@ class _BookPageState extends State<BookPage> {
         ),
         child: ListView(
           children: <Widget>[
-            Column(children: <Widget>[
+            ColumnSuper(children: <Widget>[
               RowSuper(
                 children: <Widget>[
-                  BookVerticalText(),
+                  ScheduleVerticalText(),
                   TextLogin(),
                   hamburger(),
                 ],
                 innerDistance: -15,
                 alignment: Alignment.topRight,
               ),
-              PickUpInput(),
-              DropOffInput(),
-              RowSuper(
-                children: <Widget>[
-                  TimeInput(),
-                  RowSpacer(),
-                  BookAMPM(),
-                ],
-                innerDistance: -100,
-              ),
-              BookSubmit(),
+              DayButton(1),
+              DayButton(2),
+              DayButton(3),
+              DayButton(4),
+              DayButton(5),
+              DayButton(6),
+              DayButton(7),
             ]),
           ],
         ),

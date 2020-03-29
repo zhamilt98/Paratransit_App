@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/widget/button.dart';
-import 'package:flutterapp/widget/first.dart';
-import 'package:flutterapp/widget/forgot.dart';
-import 'package:flutterapp/widget/inputEmail.dart';
-import 'package:flutterapp/widget/password.dart';
-import 'package:flutterapp/widget/textLogin.dart';
-import 'package:flutterapp/widget/verticalText.dart';
+import 'package:flutterapp/widget/signIn/signInButton.dart';
+import 'package:flutterapp/widget/signIn/first.dart';
+import 'package:flutterapp/widget/signIn/signInEmail.dart';
+import 'package:flutterapp/widget/signIn/signInPassword.dart';
+import 'package:flutterapp/widget/general/topText.dart';
+import 'package:flutterapp/widget/signIn/signInVerticalText.dart';
 
 class LoginPage extends StatefulWidget {
   @override

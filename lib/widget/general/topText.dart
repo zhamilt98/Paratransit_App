@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 
-class TextNew extends StatefulWidget {
+class TextLogin extends StatefulWidget {
   @override
-  _TextNewState createState() => _TextNewState();
+  _TextLoginState createState() => _TextLoginState();
 }
 
-class _TextNewState extends State<TextNew> {
+class _TextLoginState extends State<TextLogin> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 10.0),
+      padding: const EdgeInsets.only(top: 10, right: 20),
       child: Container(
         //color: Colors.green,
-        height: 200,
+        height: 100,
         width: 200,
         child: Column(
           children: <Widget>[
-            Container(
-              height: 60,
-            ),
             Center(
               child: Text(
                 'Paratransit',
