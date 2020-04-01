@@ -87,36 +87,33 @@ class _DayPageState extends State<DayPage> {
       ),
     );
 
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: new Scaffold(
-        body: new Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                colors: [Colors.greenAccent, Colors.green]),
-          ),
-          child: new Column(
-            children: <Widget>[
-              RowSuper(
-                children: <Widget>[
-                  DayVerticalText(day),
-                  TextLogin(),
-                  hamburger(),
-                ],
-                innerDistance: -12,
-                alignment: Alignment.topRight,
-              ),
-              data.length == 0 ? dynamicTextField : result,
-              data.length == 0 ? submitButton : new Container(),
-            ],
-          ),
+    return new Scaffold(
+      body: new Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              colors: [Colors.greenAccent, Colors.green]),
         ),
-        floatingActionButton: new FloatingActionButton(
-          onPressed: addDynamic,
-          child: floatingIcon,
+        child: new Column(
+          children: <Widget>[
+            RowSuper(
+              children: <Widget>[
+                DayVerticalText(day),
+                TextLogin(),
+                hamburger(),
+              ],
+              innerDistance: -12,
+              alignment: Alignment.topRight,
+            ),
+            data.length == 0 ? dynamicTextField : result,
+            data.length == 0 ? submitButton : new Container(),
+          ],
         ),
+      ),
+      floatingActionButton: new FloatingActionButton(
+        onPressed: addDynamic,
+        child: floatingIcon,
       ),
     );
   }

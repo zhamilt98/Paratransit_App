@@ -17,7 +17,6 @@ class _TimeInputState extends State<TimeInput> {
           style: TextStyle(
             color: Colors.black54,
           ),
-          obscureText: true,
           decoration: InputDecoration(
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.black, width: 5.0),
