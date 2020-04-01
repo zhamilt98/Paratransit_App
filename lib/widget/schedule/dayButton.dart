@@ -30,7 +30,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(1)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -67,44 +67,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(
-                      'Tuesday',
-                      style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                    Icon(
-                      Icons.arrow_forward,
-                      color: Colors.green,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          );
-        }
-        break;
-      case 2:
-        {
-          return Padding(
-            padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
-            child: Container(
-              alignment: Alignment.bottomRight,
-              height: 50,
-              width: MediaQuery.of(context).size.width,
-              child: RaisedButton(
-                padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                color: Color.fromRGBO(0, 0, 0, 100.0),
-                onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(2)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -141,7 +104,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(3)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -178,7 +141,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(4)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -216,7 +179,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(5)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -254,7 +217,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(6)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -291,7 +254,7 @@ class _DayButtonState extends State<DayButton> {
                 color: Color.fromRGBO(0, 0, 0, 100.0),
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DayPage(day)));
+                      MaterialPageRoute(builder: (context) => DayPage(7)));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
