@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/widget/signUp/signUpButton.dart';
 import 'package:flutterapp/widget/signUp/signUpEmail.dart';
 import 'package:flutterapp/widget/signUp/signUpName.dart';
-import 'package:flutterapp/widget/signIn/signInPassword.dart';
+import 'package:flutterapp/widget/signUp/signUpPassword.dart';
 import 'package:flutterapp/widget/signUp/signUpVerticalText.dart';
 import 'package:flutterapp/widget/general/topText.dart';
 import 'package:flutterapp/widget/signUp/userOld.dart';
+import 'package:flutterapp/widget/signUp/number.dart';
+import 'package:flutterapp/widget/signUp/phone.dart';
+import 'package:flutterapp/widget/signUp/signUpPasswordConfirm.dart';
+import 'package:flutterapp/widget/signUp/semester.dart';
+import 'package:flutterapp/widget/signUp/userType.dart';
 
 class NewUser extends StatefulWidget {
   @override
@@ -33,9 +38,14 @@ class _NewUserState extends State<NewUser> {
                     TextLogin(),
                   ],
                 ),
-                NewNome(),
+                NewName(),
                 NewEmail(),
-                PasswordInput(),
+                Number(),
+                PhoneNumber(),
+                AcademicSemester(),
+                UserType(),
+                SignUpPassword(),
+                PasswordConfirm(),
                 ButtonNewUser(),
                 UserOld(),
               ],

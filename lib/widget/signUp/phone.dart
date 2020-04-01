@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class NewName extends StatefulWidget {
+class PhoneNumber extends StatefulWidget {
   @override
-  _NewNameState createState() => _NewNameState();
+  _PhoneNumberState createState() => _PhoneNumberState();
 }
 
-class _NewNameState extends State<NewName> {
+class _PhoneNumberState extends State<PhoneNumber> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
+      padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
       child: Container(
         height: 60,
         width: MediaQuery.of(context).size.width,
@@ -22,7 +22,7 @@ class _NewNameState extends State<NewName> {
               borderSide: BorderSide(color: Colors.black, width: 5.0),
             ),
             fillColor: Colors.black54,
-            labelText: 'Name',
+            labelText: 'Phone Number',
             labelStyle: TextStyle(
               color: Colors.black54,
             ),

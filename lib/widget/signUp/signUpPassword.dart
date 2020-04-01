@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class NewName extends StatefulWidget {
+class SignUpPassword extends StatefulWidget {
   @override
-  _NewNameState createState() => _NewNameState();
+  _SignUpPasswordState createState() => _SignUpPasswordState();
 }
 
-class _NewNameState extends State<NewName> {
+class _SignUpPasswordState extends State<SignUpPassword> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
+      padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
       child: Container(
         height: 60,
         width: MediaQuery.of(context).size.width,
@@ -17,12 +17,12 @@ class _NewNameState extends State<NewName> {
           style: TextStyle(
             color: Colors.black54,
           ),
+          obscureText: true,
           decoration: InputDecoration(
             border: UnderlineInputBorder(
               borderSide: BorderSide(color: Colors.black, width: 5.0),
             ),
-            fillColor: Colors.black54,
-            labelText: 'Name',
+            labelText: 'Password',
             labelStyle: TextStyle(
               color: Colors.black54,
             ),
