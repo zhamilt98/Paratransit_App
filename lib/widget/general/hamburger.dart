@@ -21,7 +21,7 @@ class _hamburgerState extends State<hamburger> {
           style: TextStyle(color: Colors.black54),
           onChanged: (String newValue) {
             switch (newValue) {
-              case "Dashboard":
+              case "Schedule":
                 {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => DashboardPage()));
@@ -39,12 +39,7 @@ class _hamburgerState extends State<hamburger> {
                       MaterialPageRoute(builder: (context) => BookPage()));
                 }
                 break;
-              case "Settings":
-                {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => BookPage()));
-                }
-                break;
+
               case "Logout":
                 {
                   Navigator.push(context,
@@ -60,10 +55,9 @@ class _hamburgerState extends State<hamburger> {
             }
           },
           items: <String>[
-            'Dashboard',
+            'Schedule',
             'Create Schedule',
             'Book a Ride',
-            'Settings',
             'Logout'
           ].map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(

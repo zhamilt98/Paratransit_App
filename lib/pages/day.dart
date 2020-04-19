@@ -3,6 +3,10 @@ import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutterapp/widget/general/hamburger.dart';
 import 'package:flutterapp/widget/general/topText.dart';
 import 'package:flutterapp/widget/day/dayVerticalText.dart';
+import 'package:flutterapp/widget/day/scheduleAMPM.dart';
+import 'package:flutterapp/widget/day/scheduleDropOff.dart';
+import 'package:flutterapp/widget/day/schedulePickUp.dart';
+import 'package:flutterapp/widget/day/scheduleTime.dart';
 
 class DayPage extends StatefulWidget {
   @override
@@ -79,43 +83,56 @@ class _DayPageState extends State<DayPage> {
 
     Widget submitButton = new Container(
       child: new RaisedButton(
+        color: Color.fromRGBO(0, 0, 0, 100.0),
         onPressed: submitData,
         child: new Padding(
           padding: new EdgeInsets.all(16.0),
-          child: new Text('Submit Data'),
+          child: new Text(
+            'Submit',
+            style: TextStyle(color: Colors.green, fontSize: 18),
+          ),
         ),
       ),
     );
+    return GestureDetector(
+        onTap: () {
+          FocusScopeNode currentFocus = FocusScope.of(context);
 
-    return new Scaffold(
-      body: new Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Colors.greenAccent, Colors.green]),
-        ),
-        child: new Column(
-          children: <Widget>[
-            RowSuper(
-              children: <Widget>[
-                DayVerticalText(day),
-                TextLogin(),
-                hamburger(),
-              ],
-              innerDistance: -12,
-              alignment: Alignment.topRight,
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
+          }
+        },
+        child: new Scaffold(
+          body: new Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.greenAccent, Colors.green]),
             ),
-            data.length == 0 ? dynamicTextField : result,
-            data.length == 0 ? submitButton : new Container(),
-          ],
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: addDynamic,
-        child: floatingIcon,
-      ),
-    );
+            child: new Column(
+              children: <Widget>[
+                RowSuper(
+                  children: <Widget>[
+                    DayVerticalText(day),
+                    TextLogin(),
+                    hamburger(),
+                  ],
+                  innerDistance: -12,
+                  alignment: Alignment.topRight,
+                ),
+                data.length == 0 ? dynamicTextField : result,
+                data.length == 0 ? submitButton : new Container(),
+              ],
+            ),
+          ),
+          floatingActionButton: new FloatingActionButton(
+            backgroundColor: Color.fromRGBO(0, 0, 0, 100.0),
+            foregroundColor: Colors.green,
+            onPressed: addDynamic,
+            child: floatingIcon,
+          ),
+        ));
   }
 }
 
@@ -130,12 +147,26 @@ class _DynamicWidgetState extends State<DynamicWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
+        child: Container(
       margin: new EdgeInsets.all(8.0),
-      child: new TextField(
-        controller: controller,
-        decoration: new InputDecoration(hintText: 'Enter Data '),
-      ),
-    );
+      decoration: BoxDecoration(
+          border: Border.all(
+        width: 2.0,
+        color: Colors.black54,
+      )),
+      child: Column(children: <Widget>[
+        SchedulePickUp(),
+        ScheduleDropOff(),
+        RowSuper(
+          children: <Widget>[
+            ScheduleTime(),
+            RowSpacer(),
+            ScheduleAMPM(),
+          ],
+          innerDistance: -100,
+        ),
+      ]),
+    ));
   }
 }

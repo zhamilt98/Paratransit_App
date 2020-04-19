@@ -17,41 +17,49 @@ class BookPage extends StatefulWidget {
 class _BookPageState extends State<BookPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Colors.greenAccent, Colors.green]),
-        ),
-        child: ListView(
-          children: <Widget>[
-            Column(children: <Widget>[
-              RowSuper(
-                children: <Widget>[
-                  BookVerticalText(),
-                  TextLogin(),
-                  hamburger(),
-                ],
-                innerDistance: -15,
-                alignment: Alignment.topRight,
-              ),
-              PickUpInput(),
-              DropOffInput(),
-              RowSuper(
-                children: <Widget>[
-                  TimeInput(),
-                  RowSpacer(),
-                  BookAMPM(),
-                ],
-                innerDistance: -100,
-              ),
-              BookSubmit(),
-            ]),
-          ],
-        ),
-      ),
-    );
+    return GestureDetector(
+        onTap: () {
+          FocusScopeNode currentFocus = FocusScope.of(context);
+
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
+          }
+        },
+        child: Scaffold(
+          body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.greenAccent, Colors.green]),
+            ),
+            child: ListView(
+              children: <Widget>[
+                Column(children: <Widget>[
+                  RowSuper(
+                    children: <Widget>[
+                      BookVerticalText(),
+                      TextLogin(),
+                      hamburger(),
+                    ],
+                    innerDistance: -15,
+                    alignment: Alignment.topRight,
+                  ),
+                  PickUpInput(),
+                  DropOffInput(),
+                  RowSuper(
+                    children: <Widget>[
+                      TimeInput(),
+                      RowSpacer(),
+                      BookAMPM(),
+                    ],
+                    innerDistance: -100,
+                  ),
+                  BookSubmit(),
+                ]),
+              ],
+            ),
+          ),
+        ));
   }
 }

@@ -14,31 +14,39 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Colors.greenAccent, Colors.green]),
-        ),
-        child: ListView(
-          children: <Widget>[
-            Column(
+    return GestureDetector(
+        onTap: () {
+          FocusScopeNode currentFocus = FocusScope.of(context);
+
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
+          }
+        },
+        child: Scaffold(
+          body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.greenAccent, Colors.green]),
+            ),
+            child: ListView(
               children: <Widget>[
-                Row(children: <Widget>[
-                  VerticalText(),
-                  TextLogin(),
-                ]),
-                InputEmail(),
-                PasswordInput(),
-                ButtonLogin(),
-                FirstTime(),
+                Column(
+                  children: <Widget>[
+                    Row(children: <Widget>[
+                      VerticalText(),
+                      TextLogin(),
+                    ]),
+                    InputEmail(),
+                    PasswordInput(),
+                    ButtonLogin(),
+                    FirstTime(),
+                  ],
+                ),
               ],
             ),
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 }

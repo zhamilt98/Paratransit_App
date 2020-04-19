@@ -20,39 +20,47 @@ class NewUser extends StatefulWidget {
 class _NewUserState extends State<NewUser> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Colors.greenAccent, Colors.green]),
-        ),
-        child: ListView(
-          children: <Widget>[
-            Column(
+    return GestureDetector(
+        onTap: () {
+          FocusScopeNode currentFocus = FocusScope.of(context);
+
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
+          }
+        },
+        child: Scaffold(
+          body: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.greenAccent, Colors.green]),
+            ),
+            child: ListView(
               children: <Widget>[
-                Row(
+                Column(
                   children: <Widget>[
-                    signup(),
-                    TextLogin(),
+                    Row(
+                      children: <Widget>[
+                        signup(),
+                        TextLogin(),
+                      ],
+                    ),
+                    NewName(),
+                    NewEmail(),
+                    Number(),
+                    PhoneNumber(),
+                    AcademicSemester(),
+                    UserType(),
+                    SignUpPassword(),
+                    PasswordConfirm(),
+                    ButtonNewUser(),
+                    UserOld(),
                   ],
                 ),
-                NewName(),
-                NewEmail(),
-                Number(),
-                PhoneNumber(),
-                AcademicSemester(),
-                UserType(),
-                SignUpPassword(),
-                PasswordConfirm(),
-                ButtonNewUser(),
-                UserOld(),
               ],
             ),
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 }

@@ -19,6 +19,7 @@ environment:
 dependencies:
   assorted_layout_widgets: ^1.0.15
   flutter_form_builder: ^3.8.2
+  dcdg: ^2.0.1
   flutter:
     sdk: flutter
 

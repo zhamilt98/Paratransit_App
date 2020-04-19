@@ -13,7 +13,7 @@ class _DashboardVerticalTextState extends State<DashboardVerticalText> {
       child: RotatedBox(
           quarterTurns: -1,
           child: Text(
-            'Dashboard',
+            'Schedule',
             style: TextStyle(
               color: Colors.black,
               fontSize: 38,

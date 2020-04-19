@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/widget/general/hamburger.dart';
-import 'package:flutterapp/widget/dashboard/schedule.dart';
 import 'package:flutterapp/widget/general/topText.dart';
 import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 import 'package:flutterapp/widget/dashboard/dashboardVertical.dart';
+import 'package:flutterapp/widget/dashboard/dashboardDayButton.dart';
 
 class DashboardPage extends StatefulWidget {
   @override
@@ -34,8 +34,13 @@ class _DashboardPageState extends State<DashboardPage> {
                   innerDistance: -15,
                   alignment: Alignment.topRight,
                 ),
-                schedule(),
-                schedule()
+                DashDayButton(1),
+                DashDayButton(2),
+                DashDayButton(3),
+                DashDayButton(4),
+                DashDayButton(5),
+                DashDayButton(6),
+                DashDayButton(7),
               ],
             ),
           ],
